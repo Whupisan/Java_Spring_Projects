@@ -1,5 +1,5 @@
 
-public class Mammal {
+public class Mammal implements energyTracker {
 	private int energyLevel;
 
 	// Mammal constructor
@@ -8,10 +8,12 @@ public class Mammal {
 	}
 	
 	// Getters and Setters
+	@Override
 	public int getEnergyLevel() {
 		return energyLevel;
 	}
 
+	@Override
 	public void setEnergyLevel(int energyLevel) {
 		this.energyLevel = energyLevel;
 	}
