@@ -8,9 +8,7 @@ public class GorillaTest {
 		System.out.println(alex.getName());
 		
 		alex.displayEnergy();
-		alex.eatBananas();
-		alex.displayEnergy();
-		alex.throwSomething();
+		alex.eatBananas().throwSomething().throwSomething().eatBananas();
 		alex.displayEnergy();
 	}
 

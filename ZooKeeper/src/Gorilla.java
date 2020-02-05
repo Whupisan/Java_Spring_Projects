@@ -20,22 +20,24 @@ public class Gorilla extends Mammal {
 	}
 
 	// Methods for the animal
-	public int throwSomething() {
+	public Gorilla throwSomething() {
 		System.out.printf("%s has thrown something\n", this.getName());
-		this.setEnergyLevel(energyLevel-5);
-		return energyLevel;
+		int currentHealth = this.getEnergyLevel() -5;
+		this.setEnergyLevel(currentHealth);
+		return this;
 	}
 
-	public int climb() {
+	public Gorilla climb() {
 		System.out.printf("%s is now climbing.\n", this.getName());
-		this.setEnergyLevel(energyLevel-10);
-		return energyLevel;
+		int currentHealth = this.getEnergyLevel() - 10;
+		this.setEnergyLevel(currentHealth);
+		return this;
 	}	
 
-	public int eatBananas() {
+	public Gorilla eatBananas() {
 		System.out.printf("%s is now eating a banana.\n", this.getName());
-		int currentHealth = energyLevel +10;
+		int currentHealth = this.getEnergyLevel() + 10;
 		this.setEnergyLevel(currentHealth);
-		return energyLevel;
+		return this;
 	}	
 }
